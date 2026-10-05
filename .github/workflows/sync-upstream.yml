@@ -1,0 +1,19 @@
+name: Sync upstream
+
+on:
+  schedule:
+    # Run daily at 04:17 UTC (12:17 Asia/Taipei).
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync master from Umami upstream
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh repo sync "$GITHUB_REPOSITORY" --source umami-software/umami --branch master

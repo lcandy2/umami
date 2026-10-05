@@ -2,7 +2,7 @@
 
 All 52 reviewed open alerts have been addressed in the local dev working tree. Every package entry in pnpm-lock.yaml was compared to the GitHub alert ranges; zero affected versions remain. pnpm audit reports no known vulnerabilities.
 
-The changes are not committed or pushed yet. GitHub still has 52 open alerts because its default branch, master, has the old dependency graph. These should close as fixed after the changes reach master; do not dismiss still-vulnerable master dependencies as inaccurate or unused.
+The changes are not committed or pushed yet. GitHub still has 52 open alerts because its default branch, main, has the old dependency graph. These should close as fixed after the changes reach main; do not dismiss still-vulnerable main dependencies as inaccurate or unused.
 
 ## Changes
 

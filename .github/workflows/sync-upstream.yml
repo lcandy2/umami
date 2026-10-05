@@ -13,7 +13,14 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync master from Umami upstream
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh repo sync "$GITHUB_REPOSITORY" --source umami-software/umami --branch master
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fast-forward main from Umami upstream master
+        run: |
+          git remote add upstream https://github.com/umami-software/umami.git
+          git fetch upstream master
+          git merge --ff-only upstream/master
+          git push origin HEAD:main

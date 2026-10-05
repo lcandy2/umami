@@ -6,10 +6,10 @@ Thanks for your interest in contributing to Umami! This document outlines the pr
 
 Umami uses the following long-lived branches:
 
-- `master` — stable, released code. **Do not open PRs against `master`.**
+- `main` — stable, released code. **Do not open PRs against `main`.**
 - `dev` — active development. **All pull requests should target `dev`.**
 
-Feature branches and fixes are merged into `dev`, and `dev` is periodically merged into `master` for releases.
+Feature branches and fixes are merged into `dev`, and `dev` is periodically merged into `main` for releases.
 
 ## Submitting a Pull Request
 
@@ -29,7 +29,7 @@ Feature branches and fixes are merged into `dev`, and `dev` is periodically merg
 4. Push your branch and open a pull request **against the `dev` branch**.
 5. Fill in the PR description with what changed and why. Link any related issues.
 
-PRs opened against `master` will be asked to retarget `dev`.
+PRs opened against `main` will be asked to retarget `dev`.
 
 ## Reporting Issues
 
